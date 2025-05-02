@@ -1,59 +1,40 @@
-# Emotion Detection in Text
+# Emotion Detection in Text using Natural Language Processing
 
-This project is a Streamlit web app that detects emotions from user-input text using natural language processing and a pre-trained machine learning model. It is designed for analyzing social media conversations or any free-form text to classify emotions such as anger, joy, sadness, fear, surprise, and more.
+<img src="./images/index.png"/>
 
----
+<br>
 
-## Features
+# Introduction
+Emotion detection in text data involves identifying the emotions expressed in textual data. This can be a challenging task since emotions are often expressed in complex and subtle ways. Natural language processing (NLP) techniques can be used to analyze text data and identify the emotions expressed in it.
 
-- Real-time emotion detection with emoji feedback
-- Confidence score and probability chart for each prediction
-- Monitor tab for app usage and prediction statistics
-- Simple, user-friendly interface
+The aim of this project is to develop a model that uses NLP techniques to accurately detect emotions in text data. The model can be used for sentiment analysis, customer feedback analysis, and social media monitoring. The model is trained on a dataset of text data that has been labeled with the corresponding emotions expressed in it.
 
----
+# Dataset
+The <a src="./data/">dataset</a> used for this project contains text data labeled with one of eight emotions: anger, disgust, fear, joy, neutral, sadness, shame and surprise. The dataset contains a total of 34795 rows.
 
-## Installation
+# Methodology
+- The methodology used for this project involves the following steps:
+1. Preprocessing the text data: The text data is preprocessed by removing stop words, punctuation, user handles and converting all text to lowercase. 
+2. Model training: A machine learning model is trained on the extracted features to predict the emotions expressed in the text data. The model used for this project is a Logistic Regression and MultinomialNB.
+3. Model evaluation: The trained model is evaluated on the test data to measure its accuracy in detecting emotions in text data.
 
-1. **Clone or Download the Repository**
-*Or download as ZIP and extract.*
+# Results
+The Logistic Regression achieved an accuracy of 62% on the data.
 
-2. **(Optional) Create and Activate a Virtual Environment**
+# Installation
+1. Clone the repository to your local machine:
+```
+https://github.com/SannketNikam/Emotion-Detection-in-Text.git
+```
 
-3. **Install Dependencies**
-*If requirements.txt is missing, install:*
+2. Install the 'requirements.txt':
+```
+pip install -r requirements.txt
+```
 
----
+3. To run this project :
+```
+streamlit run app.py
+```
 
-## Usage
-
-1. **Run the App**
-2. **Open your browser to** [http://localhost:8501](http://localhost:8501) *(should open automatically)*
-
----
-
-## Project Structure
-
----
-
-## Notes
-
-- Ensure `emotion_classifier_pipe_lr.pkl` and `track_utils.py` are present as required by `app.py`.
-- If you encounter missing module errors, install the package using pip.
-- If you see "file not found" errors, check your working directory.
-
----
-
-## License
-
-MIT License
-
----
-
-## Credits
-
-Original project by [Sannket Nikam](https://github.com/SannketNikam).
-
----
-
-
+4. It'll automatically open the Streamlit app in your default browser.
